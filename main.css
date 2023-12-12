@@ -1,0 +1,63 @@
+html {
+  /* padding-top: px; */
+  display: flex;
+
+  justify-content: center;
+  /* align-content: center; */
+  padding-top: 100px;
+}
+.calview {
+  background-color: rgb(235, 202, 144);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 7px 7px rgb(111, 92, 66);
+}
+.display {
+  border: 2px solid rgb(10, 10, 10);
+  background-color: rgb(129, 99, 67);
+  border-radius: 20px;
+  height: 50px;
+  font-size: 30px;
+  font-family: Verdana;
+  text-align: right;
+  padding: 5px 10px;
+  /* cursor: pointer; */
+  line-height: 45px;
+  box-shadow: inset 2px 2px rgb(77, 59, 40);
+  /* inset se andar chali jati hai  */
+}
+.displaycontainer {
+  height: 100px;
+}
+
+button {
+  background-color: rgb(255, 136, 0);
+  color: white;
+  font-size: 25px;
+  font-family: Verdana;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 20px 25px;
+  margin: 2px 1px;
+  box-shadow: 2px 2px rgb(17, 17, 17);
+}
+button:hover {
+  background-color: rgb(186, 101, 4);
+}
+
+button:active {
+  background-color: rgb(167, 89, 0);
+  padding: 18px 22px;
+  font-size: 22px;
+}
+
+.opbutton {
+  background-color: rgb(221, 213, 213);
+  color: black;
+}
+.opbutton:hover {
+  background-color: rgb(146, 142, 142);
+}
+.opbutton:active {
+  background-color: rgb(146, 142, 142);
+}

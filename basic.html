@@ -1,0 +1,140 @@
+<!-- string ki length ke liye => str.length() -> str.length -->
+<!-- eval function me × -> * and  ÷ -> /  use krna hoga -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <table class="calview">
+      <tr class="displaycontainer">
+        <th colspan="5">
+          <div class="display" id="display"></div>
+        </th>
+      </tr>
+      <tr>
+        <!-- use of th - head and td - data tag  -->
+        <th><button onclick="buttonNum('7')">7</button></th>
+        <th><button onclick="buttonNum('8')">8</button></th>
+        <th><button onclick="buttonNum('9')">9</button></th>
+        <th>
+          <button class="opbutton" onclick="buttonNum('÷')">&divide;</button>
+        </th>
+        <!-- for divide sign we use &divide -->
+      </tr>
+      <tr>
+        <th><button onclick="buttonNum('4')">4</button></th>
+        <th><button onclick="buttonNum('5')">5</button></th>
+        <th><button onclick="buttonNum('6')">6</button></th>
+        <th>
+          <button class="opbutton" onclick="buttonNum('×')">&times;</button>
+        </th>
+      </tr>
+      <tr>
+        <th><button onclick="buttonNum('1')">1</button></th>
+        <th><button onclick="buttonNum('2')">2</button></th>
+        <th><button onclick="buttonNum('3')">3</button></th>
+        <th>
+          <button class="opbutton" onclick="buttonNum('-')">&minus;</button>
+        </th>
+      </tr>
+      <tr>
+        <th><button onclick="buttonNum('0')">0</button></th>
+        <th><button class="opbutton" onclick="cleardisplay()">C</button></th>
+        <th>
+          <button class="opbutton" onclick="equalfun2()">&equals;</button>
+        </th>
+        <th><button class="opbutton" onclick="buttonNum('+')">+</button></th>
+      </tr>
+    </table>
+    <footer>
+      <p>&copy; Amit ASJ. All Rights Reserved.</p>
+    </footer>
+  </body>
+
+  <script>
+    var displayNum = "";
+
+    document.getElementById("display").innerHTML = "0";
+
+    function buttonNum(numkey) {
+      displayNum += numkey;
+      document.getElementById("display").innerHTML = displayNum;
+    }
+
+    function equalfun2() {
+      displayNum = displayNum.replace("÷", "/");
+      displayNum = displayNum.replace("×", "*");
+
+      // evaluate value with board mass rule
+      let ans = eval(displayNum);
+
+      // for decimal value, we will show only three decimal places values
+      if (ans % 1 != 0) {
+        ans = ans.toFixed(3);
+      }
+      displayNum = ans;
+      document.getElementById("display").innerHTML = displayNum;
+    }
+    /* 
+    function equalfun(equal) {
+      // buttonNum(equal);
+      // displayNum = displayNum.slice(0, -1);
+      var str = "÷×+-";
+      // take for oper1
+      var operatorindex = -1;
+      for (let i = 0; i < 4; i++) {
+        operatorindex = displayNum.indexOf(str[i]);
+        if (operatorindex != -1) {
+          break;
+        }
+      }
+      let operator = displayNum[operatorindex];
+      let substr = displayNum.substring(0, operatorindex);
+
+      let oper1 = parseInt(substr);
+
+      substr = displayNum.substring(operatorindex + 1, displayNum.length);
+
+      let oper2 = parseInt(substr);
+
+      calculate(oper1, oper2, operator);
+    }
+    function calculate(oper1, oper2, operator) {
+      var ans = 0;
+
+      switch (operator) {
+        case "+":
+          ans = oper1 + oper2;
+          break;
+        case "-":
+          ans = oper1 - oper2;
+          break;
+        case "×":
+          ans = oper1 * oper2;
+          break;
+        case "÷":
+          ans = oper1 / oper2;
+          if (oper1 % oper2 != 0) ans = ans.toFixed(3);
+          break;
+        default:
+          break;
+      }
+
+      displayNum = ans + "";
+      document.getElementById("display").innerHTML = displayNum;
+    }
+ */
+    function cleardisplay() {
+      // displayNum.clear();
+
+      document.getElementById("display").innerHTML = "0";
+
+      displayNum = "";
+    }
+  </script>
+</html>
