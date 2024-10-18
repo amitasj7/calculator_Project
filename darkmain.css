@@ -3,20 +3,21 @@ th {
 }
 
 html {
-    padding-top: 100px;
+    padding-top: 50px;
     display: table;
     margin: auto;
+    background-color: rgb(29, 29, 29);
 }
 
 .grid {
     padding: 20px 20px 20px 20px;
-    background: rgb(221, 185, 143);
+    background: rgb(44, 50, 54);
     border-radius: 20px;
-    box-shadow: 7px 7px rgb(112, 94, 73);
+    box-shadow: 7px 7px #0D0D0F;
 }
 
 .display {
-    background-color: rgb(129, 99, 67);
+    background-color: rgb(83, 89, 105);
     height: 80px;
     border-radius: 20px;
     font-size: 30px;
@@ -24,10 +25,11 @@ html {
     text-align: right;
     padding-right: 20px;
     padding-left: 20px;
-    cursor: pointer;
     line-height: 80px;
     color: #140703;
-    box-shadow: inset 2px 2px rgb(77, 59, 40);
+    box-shadow: inset 2px 2px rgb(39, 42, 49);
+    text-shadow: 1px 1px rgb(77, 59, 40);
+
 }
 
 .displaycontainer {
@@ -35,14 +37,14 @@ html {
 }
 
 button {
-    box-shadow: 2px 2px rgb(131, 76, 14);
+    box-shadow: 2px 2px #1E2225;
     height: 80px;
     width: 80px;
     border-radius: 20px;
     border: 0;
     cursor: pointer;
-    background-color: #FA8615;
-    color: rgb(255, 255, 255);
+    background-color: rgb(64, 69, 73);
+    color: #BEBEC0;
     font-size: 30px;
     font-family: Verdana;
 }
@@ -56,17 +58,17 @@ button:active {
     height: 78px;
     width: 78px;
     font-size: 28px;
-    background-color: rgb(230, 134, 24);
+    background-color: rgb(58, 63, 66);
 }
 
 .opbutton {
-    box-shadow: 2px 2px rgb(90, 90, 86);
+    box-shadow: 2px 2px rgb(23, 25, 29);
     height: 80px;
     width: 80px;
     border-radius: 20px;
     border: 0;
     cursor: pointer;
-    background-color: #D7D7CE;
+    background-color: rgb(78, 83, 97);
     color: 	#140703;
     font-size: 30px;
     font-family: Verdana;
@@ -77,9 +79,27 @@ button:active {
 }
 
 .opbutton:active {
-    background-color: rgb(199, 199, 191);
+    background-color: rgb(70, 74, 87);
     box-shadow: none;
     height: 78px;
     width: 78px;
     font-size: 28px;
+}
+
+.theme-changer {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    box-shadow: 2px 2px rgb(23, 26, 29);
+}
+
+.theme-changer:active {
+    height: 28px;
+    width: 28px;
+}
+
+.theme-container {
+    padding-top: 50px;
 }

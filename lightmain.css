@@ -3,9 +3,10 @@ th {
 }
 
 html {
-    padding-top: 100px;
+    padding-top: 50px;
     display: table;
     margin: auto;
+    background-color: rgb(228, 228, 228);
 }
 
 .grid {
@@ -24,10 +25,11 @@ html {
     text-align: right;
     padding-right: 20px;
     padding-left: 20px;
-    cursor: pointer;
     line-height: 80px;
     color: #140703;
     box-shadow: inset 2px 2px rgb(77, 59, 40);
+    text-shadow: 1px 1px rgb(77, 59, 40);
+
 }
 
 .displaycontainer {
@@ -82,4 +84,21 @@ button:active {
     height: 78px;
     width: 78px;
     font-size: 28px;
+}
+
+.theme-changer {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.theme-changer:active {
+    height: 28px;
+    width: 28px;
+}
+
+.theme-container {
+    padding-top: 50px;
 }
